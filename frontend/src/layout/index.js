@@ -19,7 +19,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 
 import MainListItems from "./MainListItems";
-
+import NotificationsPopOver from "../components/NotificationsPopOver";
 import UserModal from "../components/UserModal";
 import { AuthContext } from "../context/Auth/AuthContext";
 import BackdropLoading from "../components/BackdropLoading";
@@ -224,7 +224,7 @@ const LoggedInLayout = ({ children }) => {
             { nomeEmpresa } - v { versionSystem }
             
           </Typography>
-
+        {user.id && <NotificationsPopOver />}
           
 
           <div>
